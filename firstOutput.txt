@@ -1,0 +1,1 @@
+sum of the variables is 30 and the product of the variables is 200

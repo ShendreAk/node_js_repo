@@ -1,0 +1,37 @@
+<%- include('../partials/head') %>
+</head>
+<body>
+  
+  
+  <header>
+    <h1 class="text-red-700 text-5xl mx-3 my-3 bg-slate-950"> Welcome to airbnb </h1> 
+  </header>
+  <main>
+    <a href="/host/home">Add-Home</a>
+    <h2>Registered homes are:</h2>
+    <ul>
+      <% registeredHomes.forEach((home)=>{ %>
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <a href="#">
+              <img class="rounded-t-lg" src= "https://www.google.com/imgres?q=house&imgurl=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F106399%2Fpexels-photo-106399.jpeg&imgrefurl=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fhouse%2F&docid=w_edFuvJNI2ApM&tbnid=kdENxlNldMG6sM&vet=12ahUKEwjVkoryiKSJAxXqxjgGHVEvKkwQM3oECHUQAA..i&w=5408&h=3605&hcb=2&ved=2ahUKEwjVkoryiKSJAxXqxjgGHVEvKkwQM3oECHUQAA" alt="" />
+          </a>
+          <div class="p-5">
+              <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><%= home.HomeName%></h5>
+              </a>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><%= home.HomePrice %></p>
+              <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  Read more
+                   <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                  </svg>
+              </a>
+          </div>
+      </div>
+      <% }); %>
+    </ul>
+
+  </main>
+  
+</body>
+</html>

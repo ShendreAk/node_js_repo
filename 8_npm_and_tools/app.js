@@ -7,4 +7,4 @@ const server = http.createServer((req, res)=>{console.log(req.url, req.method);
   return res.end()
 })
 
-server.listen(2000, ()=>{console.log(`server running at http://localhost:2000`)});
+server.listen(3000, ()=>{console.log(`server running at http://localhost:3 000`)});
